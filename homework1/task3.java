@@ -8,7 +8,7 @@ public class task3 {
 
         System.out.print("Input a string: ");
         String source = in.next();
-        System.out.print( "repeat: ");
+        System.out.print("repeat: ");
         int repeat = in.nextInt();
         in.close();
         printString(source, repeat);
