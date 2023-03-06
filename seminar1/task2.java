@@ -11,7 +11,8 @@ public class task2 {
         int[] array = { 3, 2, 2, 3, 1, 5, 5, 3, 3 };
         int val = 2;
         for (int x : array) {
-            System.out.print(x);}
+            System.out.print(x);
+        }
         System.out.println();
         swap(array, val);
         for (int x : array) {
@@ -23,7 +24,7 @@ public class task2 {
         int size = array.length;
         int shift = 1;
         for (int i = 0; i < size - shift; i++) {
-            while (array[size-shift] == val){
+            while (array[size - shift] == val) {
                 shift++;
             }
             if (array[i] == val) {
