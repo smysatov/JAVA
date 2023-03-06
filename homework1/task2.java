@@ -1,20 +1,22 @@
 package homework1;
 
-
 import java.util.Scanner;
- 
+
 public class task2 {
-   
+
     public static void main(String[] args) {
-           
         Scanner in = new Scanner(System.in);
-        System.out.print("Input name: ");
-        String name = in.nextLine();
-        System.out.print("Input age: ");
-        int age = in.nextInt();
-        System.out.print("Input height: ");
-        float height = in.nextFloat();
-        System.out.printf("Name: %s  Age: %d  Height: %.2f \n", name, age, height);
+
+        System.out.print("Input a number: ");
+        int x = in.nextInt();
         in.close();
+        System.out.println(isPositive(x));
     }
+
+    private static boolean isPositive(int x) {
+        // проверить, что х положительное
+        if (x > 0) {
+            return true;}
+        return false;
+        }
 }
