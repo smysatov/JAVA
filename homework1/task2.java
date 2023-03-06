@@ -16,7 +16,8 @@ public class task2 {
     private static boolean isPositive(int x) {
         // проверить, что х положительное
         if (x > 0) {
-            return true;}
-        return false;
+            return true;
         }
+        return false;
+    }
 }
