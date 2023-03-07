@@ -17,7 +17,7 @@ public class task3 {
     private static void printString(String source, int repeat) {
         // напечатать строку source repeat раз
         for (int index = 0; index < repeat; index++) {
-            System.out.println(source);
+            System.out.print(source);
         }
     }
 }

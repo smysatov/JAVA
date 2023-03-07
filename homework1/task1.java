@@ -22,7 +22,7 @@ public class task1 {
 
     private static boolean isSumBetween10And20(int a, int b) {
         // проверить, что сумма a и b лежит между 10 и 20
-        if ((a + b) > 10 && (a + b) < 20) {
+        if ((a + b) >= 10 && (a + b) <= 20) {
             return true;
         }
         return false;
