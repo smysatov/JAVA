@@ -11,11 +11,12 @@ public class task1 {
     //
     public static void main(String[] args) throws IOException {
 
-        FileInputStream fileInputStream = new FileInputStream("file.txt");
-        byte[] bytes = new byte[100];
-        fileInputStream.read(bytes);
-        // byte[] bytes = fileInputStream.readAllBytes();
-        System.out.println(Arrays.toString(bytes));
+        try (FileInputStream fileInputStream = new FileInputStream("file.txt")) {
+			byte[] bytes = new byte[100];
+			fileInputStream.read(bytes);
+			// byte[] bytes = fileInputStream.readAllBytes();
+			System.out.println(Arrays.toString(bytes));
+		}
 
         // BufferedOutputStream os = new BufferedOutputStream(new
         // FileOutputStream("file.txt"));
