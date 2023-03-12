@@ -15,10 +15,15 @@ public class Task_2 {
     }
 
     public static void removeNumber(List<String> it) {
-        for (int i = 0; i < it.size(); i++) {
-            it.remove("5");
+        for (int i = it.size() - 1; i >= 0; i--) {
+            try {
+                String str = it.get(i);
+                Integer.parseInt(str);
+                it.remove(i);
+
+            } catch (NumberFormatException e) {
+
+            }
         }
     }
 }
-
-// list.removeIf(element -> element == 2);
