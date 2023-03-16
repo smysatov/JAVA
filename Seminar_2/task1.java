@@ -1,4 +1,4 @@
-package Seminar2;
+package Seminar_2;
 
 import java.io.FileInputStream;
 import java.io.IOException;
