@@ -1,8 +1,6 @@
 package Homework_4;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Task_1 {
@@ -13,11 +11,12 @@ public class Task_1 {
      * num.
      * Если введено print~num, выводит строку из позиции num в связном списке.
      * Если введено exit, завершаем программу
+     * 
      * Пример:
      * string~4
      * num~3
-     * print~3
      * 
+     * print~3
      * num
      * print~4
      * string
@@ -26,19 +25,31 @@ public class Task_1 {
      * my_value
      */
     public static void main(String[] args) {
+        System.out.println("Enter a 'string~number' or 'exit' to stop the program");
         Scanner sc = new Scanner(System.in);
+        ArrayList<String> DB = new ArrayList<>();
         while (true) {
             String s = sc.nextLine();
-            String[] split = s.split("~");
-            System.out.println(Arrays.toString(split));
-            Integer.parseInt(split[1]);
-        }
-        List<Integer> list = new ArrayList<>();
-        while (list.size() <= 5) {
-            list.add(null);
-        }
-        list.set(5, 5);
-        System.out.println(list);
+            try {
+                if (s.equals("exit")) {
+                    break;
+                }
+                Integer.parseInt(s.split("~")[1]);
 
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+            String[] data = s.split("~");
+            int num = Integer.parseInt(data[1]);
+            int Size = num - DB.size();
+            for (int i = 0; i <= Size; i++) {
+                DB.add(null);
+            }
+            if (data[0].equals("print")) {
+                System.out.println(DB.get(num));
+            } else {
+                DB.set(num, data[0]);
+            }
+        }
     }
 }
