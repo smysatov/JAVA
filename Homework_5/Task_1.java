@@ -2,8 +2,6 @@ package Homework_5;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Task_1 {

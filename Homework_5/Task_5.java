@@ -23,8 +23,8 @@ public class Task_5 {
             stats.computeIfAbsent(len, k -> new ArrayList<>()).add(spl[i]);
         }
         for (Integer key : stats.keySet()) {
-            //System.out.println(key + " = " + stats.get(key));
-            
+            // System.out.println(key + " = " + stats.get(key));
+
             System.out.println(stats.get(key));
         }
     }
